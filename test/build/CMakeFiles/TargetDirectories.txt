@@ -1,0 +1,3 @@
+/home/jasmine/prj/KuiperCourse/test/build/CMakeFiles/test_kuiper_course.dir
+/home/jasmine/prj/KuiperCourse/test/build/CMakeFiles/edit_cache.dir
+/home/jasmine/prj/KuiperCourse/test/build/CMakeFiles/rebuild_cache.dir

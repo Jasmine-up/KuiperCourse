@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic -Wl,--dependency-file,CMakeFiles/test_kuiper_course.dir/link.d CMakeFiles/test_kuiper_course.dir/test_first.o CMakeFiles/test_kuiper_course.dir/test_main.o -o test_kuiper_course  -lglog -lgtest -lpthread 

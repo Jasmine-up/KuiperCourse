@@ -1,0 +1,22 @@
+Log file created at: 2023/07/09 20:50:07
+Running on machine: lhl
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20230709 20:50:07.620252 96801 test_main.cpp:13] Start test...
+I20230709 20:50:07.621398 96801 test_first.cpp:10] My first test!
+I20230709 20:50:07.626551 96801 test_tensor.cpp:29] [cube slice: 0]
+        0   1.0000   2.0000
+   3.0000   4.0000   5.0000
+   6.0000   7.0000   8.0000
+
+[cube slice: 1]
+    9.0000   10.0000   11.0000
+   12.0000   13.0000   14.0000
+   15.0000   16.0000   17.0000
+
+[cube slice: 2]
+   18.0000   19.0000   20.0000
+   21.0000   22.0000   23.0000
+   24.0000   25.0000   26.0000
+I20230709 20:50:07.626683 96801 test_tensor.cpp:40] Test1 passed!
+I20230709 20:50:07.626739 96801 test_tensor.cpp:67] Test2 passed!

@@ -106,7 +106,11 @@ void Tensor<float>::Padding(const std::vector<uint32_t> &pads, float padding_val
   uint32_t pad_cols2 = pads.at(3);  // right
 
   //todo 请把代码补充在这里1
-
+  this->data_.insert_rows(0, pad_rows1);
+  this->data_.insert_rows(this->data_.n_rows, pad_rows2);
+  this->data_.insert_cols(0, pad_cols1);
+  this->data_.insert_cols(this->data_.n_cols, pad_cols2);
+  this->raw_shapes_ = this->shapes();
 }
 
 void Tensor<float>::Fill(float value) {
@@ -125,6 +129,12 @@ void Tensor<float>::Fill(const std::vector<float> &values) {
   const uint32_t channels = this->data_.n_slices;
 
   //todo 请把代码补充在这里2
+  for(uint32_t i = 0; i < channels; ++i)
+  {
+    auto &channel_data = this->data_.slice(i);//先找到一个channels
+    const arma::fmat &channel_data_t = arma::fmat(values.data() + i * planes, this->cols(), this->rows());
+    channel_data = channel_data_t.t();//原来是列主序的 转置之后就是行主序了
+  }
 }
 
 void Tensor<float>::Show() {
